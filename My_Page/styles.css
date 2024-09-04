@@ -38,6 +38,7 @@ header {
 }
 @media (max-width: 768px) {
     .logo-container {
+        display: none;
         width: 25vh;
         margin-left: -20vw; /* 在较小的屏幕上减少 margin-left */
     }
@@ -157,6 +158,48 @@ body, html {
     font-size: 72px;
     margin-top: 20px;
     color: #ffffff;
+}
+
+@media (max-width: 768px) {
+    .hero {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-height: 100vh;
+        background-color: rgba(0, 0, 0, 0.7); /* 背景颜色 */
+        text-align: center; /* 确保文本在小屏幕上居中 */
+        margin: 20px; /* 确保没有外边距干扰 */
+        transform: translateY(50%); /* 向下移动容器 */
+        padding: 10vh;
+    }
+    
+    .hero h1 {
+        font-size: 8vh;
+        font-weight: 900;
+        line-height: 1.1;
+        margin: 0;
+        text-transform: uppercase;
+        color: white;
+    }
+    
+    .hero .highlight {
+        color: #36bcff; /* 蓝色高亮的颜色 */
+    }
+    
+    /* 让文字对齐方式类似图片的效果 */
+    .hero-text {
+        max-width: 30vw;
+        margin: 0 auto;
+        text-align: left;
+        line-height: 1.1;
+    }
+    
+    .hero p {
+        font-size: 72px;
+        margin-top: 20px;
+        color: #ffffff;
+    }
+    
 }
 
 .page {
