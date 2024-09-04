@@ -3,13 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Xiaotian Zhu</title>
+    <title>Hi This is Clyde</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+CU:wght@100;400&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Great+Vibes&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div id="loading-screen" class="loading-screen">
+        <h1 class="handwritten-text">Hello</h1>
+    </div>
+    
     <header>
+        
         <div class="logo-container">
             <img src="logo.png" alt="Clyde Logo" class="logo">
         </div>
@@ -47,7 +61,7 @@
 
     <section id="about" class="page">
         <h2 data-en="About Me" data-cn="关于我" data-jp="私について">About Me</h2>
-        <p data-en="Hello! I'm Xiaotian Zhu, a developer with a passion for creating elegant and functional solutions. With a focus on user-centered design, I strive to make technology accessible and enjoyable." data-cn="你好！我是朱小天，一个热衷于创造优雅且实用解决方案的开发者。我专注于以用户为中心的设计，致力于让技术变得更容易使用和享受。" data-jp="こんにちは！私はシャオティエン・ズーで、エレガントで機能的なソリューションを作成することに情熱を注ぐ開発者です。ユーザー中心のデザインに焦点を当て、技術をアクセス可能で楽しいものにすることを目指しています。">Hello! I'm Xiaotian Zhu, a developer with a passion for creating elegant and functional solutions. With a focus on user-centered design, I strive to make technology accessible and enjoyable.</p>
+        <p data-en="Hello!" data-cn="你好！" data-jp="こんにちは！"></p>
     </section>
 
     <section id="projects" class="page">
@@ -64,47 +78,40 @@
         </div>
     </section>
 
-    <section id="contact" class="page">
-        <h2 data-en="Contact Me" data-cn="联系我" data-jp="連絡先">Contact Me</h2>
+    <section id="contact" class="page contact">
+        <div class="contact-container">
+            <h2>Contact Me</h2>
+            <div class="contact-links">
+                <a href="https://qm.qq.com/q/ZHBaT2evE4" class="contact-link qq">
+                    <img src="icons8-qq-96.png" alt="QQ"> QQ
+                </a>
+                <a href="https://u.wechat.com/MAXrNMT-5SPpyxhYpzsjwU4" class="contact-link wechat">
+                    <img src="icons8-wechat-96.png" alt="WeChat"> WeChat
+                </a>
+                <a href="https://discord.gg/vsvakwngQQ" class="contact-link discord">
+                    <img src="icons8-discord-96.png" alt="Discord"> Discord
+                </a>
+                <a href="https://steamcommunity.com/profiles/76561198844814496/" class="contact-link steam">
+                    <img src="icons8-steam-96.png" alt="Steam"> Steam
+                </a>
+                <a href="https://space.bilibili.com/39256054" class="contact-link bilibili">
+                    <img src="icons8-bilibili-96.png" alt="Bilibili"> Bilibili
+                </a>
+                <a href="https://x.com/ForXxx_Ten" class="contact-link twitter">
+                    <img src="icons8-twitter-96.png" alt="Twitter"> Twitter
+                </a>
+            </div>
     
-     
-        <div class="contact-links">
-            <a href="https://qm.qq.com/q/ZHBaT2evE4" class="contact-link qq">
-                <img src="icons8-qq-96.png" alt="QQ"> QQ
-            </a>
-            <a href="https://u.wechat.com/MAXrNMT-5SPpyxhYpzsjwU4" class="contact-link wechat">
-                <img src="icons8-wechat-96.png" alt="WeChat"> WeChat
-            </a>
-            <a href="https://discord.gg/vsvakwngQQ" class="contact-link discord">
-                <img src="icons8-discord-96.png" alt="Discord"> Discord
-            </a>
-            <a href="https://steamcommunity.com/profiles/76561198844814496/" class="contact-link steam">
-                <img src="icons8-steam-96.png" alt="Steam"> Steam
-            </a>
-            <a href="https://space.bilibili.com/39256054" class="contact-link bilibili">
-                <img src="icons8-bilibili-96.png" alt="Bilibili"> Bilibili
-            </a>
-            <a href="https://x.com/ForXxx_Ten" class="contact-link twitter">
-                <img src="icons8-twitter-96.png" alt="Twitter"> Twitter
-            </a>
-        </div>
-        <div id="messageBoardContainer">
-            <h2 data-en="Leave a Message" data-cn="留言" data-jp="メッセージを残す">Leave a Message</h2>
-            
-            <form id="messageForm">
-                <label for="msgName" data-en="Name:" data-cn="名字:" data-jp="名前:">Name:</label><br>
-                <input type="text" id="msgName" name="msgName" required><br><br>
-                
-                <label for="msgContent" data-en="Message:" data-cn="消息:" data-jp="メッセージ:">Message:</label><br>
-                <textarea id="msgContent" name="msgContent" rows="5" required></textarea><br><br>
-                
-                <input type="submit" value="Post" data-en="Post" data-cn="发布" data-jp="投稿">
-            </form>
-            
-            <div id="messageBoard">
-                <h3 data-en="Messages:" data-cn="留言:" data-jp="メッセージ:">Messages:</h3>
-                <ul id="messagesList">
-                    <!-- 用户的留言会显示在这里 -->
+            <!-- 分割线 -->
+            <hr>
+    
+            <!-- 友情链接 -->
+            <div class="friend-links">
+                <h3>Friend Links</h3>
+                <ul>
+                    <li><a href="https://example1.com" target="_blank">Example Link 1</a></li>
+                    <li><a href="https://example2.com" target="_blank">Example Link 2</a></li>
+                    <li><a href="https://example3.com" target="_blank">Example Link 3</a></li>
                 </ul>
             </div>
         </div>
