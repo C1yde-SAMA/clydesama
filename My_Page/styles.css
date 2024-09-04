@@ -170,7 +170,7 @@ body, html {
         text-align: center; /* 确保文本在小屏幕上居中 */
         margin: 20px; /* 确保没有外边距干扰 */
         transform: translateY(50%); /* 向下移动容器 */
-        padding: 10vh;
+        padding: 5vh;
         
     }
     
@@ -181,7 +181,7 @@ body, html {
         margin: 0;
         text-transform: uppercase;
         color: white;
-        margin-left: -5vw;
+        margin-left: -10vw;
     }
     
     .hero .highlight {
@@ -605,7 +605,7 @@ hr {
     white-space: nowrap;
     overflow: hidden;
     width: 0;
-    animation: typing 0s steps(10, end), blink-caret 0.5s step-end infinite;
+    animation: typing 3s steps(10, end), blink-caret 0.5s step-end infinite;
     animation-timing-function: ease-in-out; /* 添加平滑过渡效果 */
 }
 
@@ -640,7 +640,7 @@ hr {
         justify-content: center; /* 内容垂直居中 */
         align-items: center; /* 水平居中 */
         overflow-y: auto; /* 允许内容滚动 */
-        margin-left: -5vw;
+        margin-left: -10vw;
     }
     .contact-links {
         display: flex;
