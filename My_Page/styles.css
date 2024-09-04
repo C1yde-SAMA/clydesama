@@ -1,0 +1,705 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: #333;
+    background-image: url('backgroud.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: rgba(255, 255, 255, 0.7); /* 使用略深的灰色作为背景色 */
+    background-blend-mode: lighten;
+    margin: 0;
+    min-height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px; /* 去除顶部和底部的 padding */
+    background-color: rgba(0, 0, 0, 0.8); /* 半透明黑色背景 */
+    color: white;
+    height: 8vh; /* 确保 header 的高度固定 */
+}
+
+.logo-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 0;
+    background-color: #cae4ff; /* 白色背景 */
+    clip-path: polygon(50px 0%, 100% 0%, calc(100% - 50px) 100%, 0% 100%); /* 固定的斜率 */
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1); /* 添加一个基本阴影 */
+    height: 100%; /* 使高度与 header 一致 */
+    width: 30vh; /* 调整宽度 */
+    margin-left: -100px; /* 向左移动20px */
+}
+
+.logo-container img {
+    width: auto;
+    height: 100%; /* 高度自动调整以适应容器 */
+    display: block;
+    margin: 0 auto;
+}
+
+.additional-shapes {
+    justify-content: flex-start; /* 左对齐 */
+    gap: 10px; /* 调整间距 */
+    position: relative;
+    display: flex;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0); /* 透明背景 */
+    height: 100%; /* 使高度与 header 一致 */
+    width: auto; /* 让宽度根据内容自适应 */
+    margin-left: -120vh; /* 确保容器在其父元素中左对齐 */
+}
+
+
+.shape {
+    width: 130px;
+    height: 100px;
+    background-color: #78b9ffc7; /* 设置颜色 */
+    clip-path: polygon(50px 0%, 100% 0%, calc(100% - 50px) 100%, 0% 100%); /* 固定的斜率 */
+}
+
+.shape:nth-child(2) {
+    width: 100px;
+    height: 100px;
+    background-color: #5dabff5b; /* 第二个平行四边形颜色略深 */
+    clip-path: polygon(50px 0%, 100% 0%, calc(100% - 50px) 100%, 0% 100%); /* 固定的斜率 */
+}
+
+.shape:nth-child(3) {
+    width: 80px;
+    height: 100px;
+    background-color: #2039552c; /* 第三个平行四边形颜色更深 */
+    clip-path: polygon(50px 0%, 100% 0%, calc(100% - 50px) 100%, 0% 100%); /* 固定的斜率 */
+}
+
+
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #007aff;
+}
+
+body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+}
+
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7); /* 背景颜色 */
+    text-align: center; /* 确保文本在小屏幕上居中 */
+    margin: 0; /* 确保没有外边距干扰 */
+    transform: translateY(50%); /* 向下移动容器 */
+    padding: 20vh;
+}
+
+.hero h1 {
+    font-size: 8vh;
+    font-weight: 900;
+    line-height: 1.1;
+    margin: 0;
+    text-transform: uppercase;
+    color: white;
+}
+
+.hero .highlight {
+    color: #36bcff; /* 蓝色高亮的颜色 */
+}
+
+/* 让文字对齐方式类似图片的效果 */
+.hero-text {
+    max-width: 30vw;
+    margin: 0 auto;
+    text-align: left;
+    line-height: 1.1;
+}
+
+.hero p {
+    font-size: 72px;
+    margin-top: 20px;
+    color: #ffffff;
+}
+
+.page {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.page.active {
+    display: block;
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.fade-in {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.fade-out {
+    opacity: 0;
+    transform: translateX(-100%);
+}
+
+footer {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+    max-width: 100%;
+    position: relative;
+    bottom: 0;
+    left: 0;
+    margin-top: auto;
+}
+
+.language-selector {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 10px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+.language-selector button {
+    background-color: transparent;
+    border: none;
+    font-size: 16px;
+    font-weight: 500;
+    color: white;
+    cursor: pointer;
+    padding: 5px 10px;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.language-selector button:hover {
+    color: #5dabff;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+}
+
+.custom-play-button {
+    display: inline-block;
+    width: 200px;
+    height: 60px;
+    border: 2px solid #ffffff; /* 蓝色边框 */
+    position: relative;
+    text-align: center;
+    line-height: 60px;
+    text-decoration: none;
+    background-color: rgba(0, 0, 0, 0.432);
+    transition: background-color 0.3s, border-color 0.3s;
+    margin-top: 50px; /* 向下移动20px */
+    opacity: 0;
+    animation: buttonFadeIn 1.5s ease forwards;
+    animation-delay: 1.4s; /* 按钮动画延迟，使其在文本之后出现 */
+}
+
+.custom-play-button:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* 悬停时背景色 */
+}
+
+.play-icon {
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 60px;
+    display: inline-block;
+    color: white; /* 白色图标 */
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes buttonFadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* 应用文字动画 */
+.hero-text span {
+    display: inline-block;
+    opacity: 0;
+    animation: fadeInUp 1s ease forwards;
+}
+
+.hero-text span:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.hero-text span:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.hero-text span:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+.hero-text span:nth-child(4) {
+    animation-delay: 0.8s;
+}
+
+.hero-text span:nth-child(5) {
+    animation-delay: 1s;
+}
+
+.hero-text span:nth-child(6) {
+    animation-delay: 1.2s;
+}
+
+
+
+.page {
+    display: none;
+    opacity: 0;
+    height: 100%;
+    background-color: #171a2194;
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.page h2, .page p {
+    text-align: center; /* 文字居中 */
+    font-size: 48px; /* 标题字体大小 */
+    margin-bottom: 20px; /* 下方间距 */
+    animation: fadeInDown 1s ease; /* 动画效果 */
+}
+
+.page p {
+    font-size: 24px; /* 段落字体大小 */
+    margin-bottom: 40px; /* 下方间距 */
+    animation: fadeInUp 1.5s ease; /* 动画效果 */
+}
+
+
+.page.active {
+    display: block;
+    opacity: 1;
+    transform: translateX(0);
+}
+
+
+.contact-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.contact-link {
+    display: inline-block;
+    width: 140px;
+    padding: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.6);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.contact-link.qq {
+    background-color: #12b7f5;
+}
+
+.contact-link.wechat {
+    background-color: #07c160;
+}
+
+.contact-link.discord {
+    background-color: #7289da;
+}
+
+.contact-link.steam {
+    background-color: #171a21;
+}
+
+.contact-link.bilibili {
+    background-color: #00a1d6;
+}
+
+.contact-link:hover {
+    transform: translateY(-5px);
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* 动画效果 */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+.page.contact {
+    padding: 100px 20px;
+    background: url('C:/Users/38963/Desktop/My_Page/backgroud.png') no-repeat center center;
+    background-size: cover;
+    background-blend-mode: darken;
+    color: white;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.page.contact::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* 添加一个暗色遮罩层 */
+    z-index: 1;
+}
+
+.page.contact h2, .page.contact p {
+    position: relative;
+    z-index: 2;
+}
+
+.contact-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    z-index: 2;
+    position: relative;
+}
+
+.contact-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    width: 160px;
+    padding: 15px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    border-radius: 12px;
+    background-color: rgba(0, 0, 0, 0.6);
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.contact-link img {
+    width: 24px;
+    height: 24px;
+}
+
+.contact-link.qq {
+    background-color: #12b7f5;
+}
+
+.contact-link.wechat {
+    background-color: #07c160;
+}
+
+.contact-link.discord {
+    background-color: #7289da;
+}
+
+.contact-link.steam {
+    background-color: #171a21;
+}
+
+.contact-link.bilibili {
+    background-color: #00a1d6;
+}
+
+.contact-link:hover {
+    transform: translateY(-5px);
+    background-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+}
+
+.contact-link img:hover {
+    filter: brightness(1.2); /* 悬停时图标亮度增加 */
+}
+
+/* 联系表单容器 */
+#contact {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    border-radius: 16px;
+}
+
+/* 表单标题 */
+#contact h2, #messageBoardContainer h2 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 20px;
+    color: #333;
+    font-weight: 700;
+}
+
+/* 标签样式 */
+#contact label, #messageBoardContainer label {
+    font-size: 18px;
+    margin-bottom: 10px;
+    display: block;
+    color: #555;
+}
+
+/* 输入框和文本区域 */
+#contact input[type="text"],
+#contact textarea,
+#messageBoardContainer input[type="text"],
+#messageBoardContainer textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 16px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+/* 输入框和文本区域的焦点效果 */
+#contact input[type="text"]:focus,
+#contact textarea:focus,
+#messageBoardContainer input[type="text"]:focus,
+#messageBoardContainer textarea:focus {
+    border-color: #007aff;
+    outline: none;
+    box-shadow: 0 0 8px rgba(0, 122, 255, 0.3);
+}
+
+/* 提交按钮 */
+#contact input[type="submit"],
+#messageBoardContainer input[type="submit"] {
+    width: 100%;
+    background-color: #007aff;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 600;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* 提交按钮的悬停效果 */
+#contact input[type="submit"]:hover,
+#messageBoardContainer input[type="submit"]:hover {
+    background-color: #005bb5;
+    box-shadow: 0 6px 15px rgba(0, 91, 181, 0.4);
+}
+
+/* 留言板样式 */
+#messageBoard {
+    margin-top: 40px;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+#messagesList {
+    list-style-type: none;
+    padding: 0;
+}
+
+#messagesList li {
+    background-color: #ffffff;
+    margin-bottom: 15px;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: flex-start; /* 确保图标与文本垂直对齐 */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#messagesList li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+#messagesList li::before {
+    content: "\f086";
+    font-family: FontAwesome;
+    color: #007aff;
+    font-size: 24px;
+    margin-right: 15px; /* 图标与文本之间的间距 */
+}
+
+.message-name {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700; /* 粗体 */
+    color: #007aff;
+    text-transform: capitalize; /* 姓名首字母大写 */
+    margin-right: 10px; /* 姓名与留言内容之间的间距 */
+}
+
+.message-content {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400; /* 正常字体 */
+    color: #555;
+    font-size: 16px;
+    line-height: 1.5;
+    flex: 1; /* 使留言内容占据剩余空间 */
+    word-wrap: break-word; /* 防止文本溢出 */
+}
+
+
+
+/* 联系方式链接样式 */
+.contact-links {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.contact-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 24px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    border-radius: 12px;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.contact-link img {
+    width: 24px;
+    height: 24px;
+}
+
+.contact-link.qq {
+    background-color: #12b7f5;
+}
+
+.contact-link.wechat {
+    background-color: #07c160;
+}
+
+.contact-link.discord {
+    background-color: #7289da;
+}
+
+.contact-link.steam {
+    background-color: #171a21;
+}
+
+.contact-link.bilibili {
+    background-color: #00a1d6;
+}
+
+.contact-link.twitter {
+    background-color: #0e0e0e;
+}
+
+.contact-link:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* 响应式调整 */
+@media (max-width: 600px) {
+    #contact {
+        padding: 20px;
+    }
+}
+
+.delete-button {
+    background-color: transparent;
+    border: none;
+    color: #ff5c5c; /* 红色 X 图标 */
+    font-size: 18px;
+    cursor: pointer;
+    margin-left: auto; /* 将按钮推到最右侧 */
+    transition: color 0.3s ease;
+}
+
+.delete-button:hover {
+    color: #ff1c1c; /* 悬停时的颜色变化 */
+}
+
+.delete-button i {
+    pointer-events: none; /* 禁止事件传递到图标上，以便按钮整体响应 */
+}
