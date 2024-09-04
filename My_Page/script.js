@@ -66,15 +66,37 @@ document.getElementById("messageForm").addEventListener("submit", function(event
 });
 
 function saveMessage(message) {
-    let messages = JSON.parse(localStorage.getItem("messages")) || [];
-    messages.push(message);
-    localStorage.setItem("messages", JSON.stringify(messages));
+    // 使用 fetch API 将留言发送到后端
+    fetch('/api/messages', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(message) // 将留言转化为 JSON 发送
+    })
+    .then(response => response.json())
+    .then(data => {
+        console.log('Message saved:', data);
+        // 处理保存成功后的操作
+    })
+    .catch(error => {
+        console.error('Error saving message:', error);
+    });
 }
 
+
 function loadMessages() {
-    let messages = JSON.parse(localStorage.getItem("messages")) || [];
-    messages.forEach(addMessageToDOM);
+    // 从后端获取留言列表
+    fetch('/api/messages')
+    .then(response => response.json())
+    .then(messages => {
+        messages.forEach(addMessageToDOM); // 将所有留言添加到页面中
+    })
+    .catch(error => {
+        console.error('Error loading messages:', error);
+    });
 }
+
 
 function addMessageToDOM(message) {
     const messageItem = document.createElement("li");
@@ -113,8 +135,18 @@ function addMessageToDOM(message) {
 }
 
 function deleteMessage(id) {
-    let messages = JSON.parse(localStorage.getItem("messages")) || [];
-    messages = messages.filter(message => message.id !== id); // 过滤掉要删除的留言
-    localStorage.setItem("messages", JSON.stringify(messages)); // 更新LocalStorage
+    // 调用后端 API 删除留言
+    fetch(`/api/messages/${id}`, {
+        method: 'DELETE'
+    })
+    .then(response => response.json())
+    .then(data => {
+        console.log('Message deleted:', data);
+        // 处理删除成功后的操作
+    })
+    .catch(error => {
+        console.error('Error deleting message:', error);
+    });
 }
+
 
