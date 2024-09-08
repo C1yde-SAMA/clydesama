@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hi This is Clyde</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+CU:wght@100;400&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Great+Vibes&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton+SC&display=swap" rel="stylesheet">
+    <style>
+        /* 主滚动字幕容器 */
+        .scrolling-text-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%; /* 占满整个视口宽度 */
+            height: auto; /* 设置容器高度 */
+            z-index: -100;
+            display: flex;
+            align-items: center;
+            overflow: hidden; /* 隐藏超出部分 */
+            transform: rotate(-5deg); /* 将容器倾斜5度 */
+        }
+
+        /* 文字滚动样式 */
+        .scrolling-text1 {
+            font-family: "Anton SC", sans-serif;
+            display: inline-block;
+            visibility: visible !important;
+            white-space: nowrap;
+            color: #ffffff67;
+            font-size: 12vh;
+            animation: scrollLeft 300s linear infinite; /* 滚动时间和线性动画 */
+        }
+
+        /* 滚动动画 */
+        @keyframes scrollLeft {
+            0% {
+                transform: translateX(0) translateY(0); /* 从左开始，垂直方向无偏移 */
+            }
+            100% {
+                transform: translateX(-100%) translateY(-10px); /* 水平移动到左边，垂直上移 10px */
+            }
+        }
+                /* 主滚动字幕容器 */
+        .scrolling-text-container2 {
+            position: absolute;
+            top: 15vh;
+            left: 0;
+            width: 100%; /* 占满整个视口宽度 */
+            height: auto; /* 设置容器高度 */
+            z-index: -100;
+            display: flex;
+            align-items: center;
+            overflow: hidden; /* 隐藏超出部分 */
+            transform: rotate(-5deg); /* 将容器倾斜5度 */
+        }
+
+        /* 文字滚动样式 */
+        .scrolling-text2 {
+            font-family: "Anton SC", sans-serif;
+            display: inline-block;
+            visibility: visible !important;
+            white-space: nowrap;
+            color: #ffffff67;
+            font-size: 12vh;
+            animation: scrollRight 300s linear infinite; /* 滚动时间和线性动画 */
+        }
+
+        @keyframes scrollRight {
+            0% {
+                transform: translateX(-100%) /* 从视口右侧外开始 */
+            }
+            100% {
+                transform: translateX(0); /* 向左滚动到视口外 */
+            }
+        }
+        /* 主滚动字幕容器 */
+        .scrolling-text-container3 {
+            position: absolute;
+            top: 30vh;
+            left: 0;
+            width: 100%; /* 占满整个视口宽度 */
+            height: auto; /* 设置容器高度 */
+            z-index: -100;
+            display: flex;
+            align-items: center;
+            overflow: hidden; /* 隐藏超出部分 */
+            transform: rotate(-5deg); /* 将容器倾斜5度 */
+        }
+
+        /* 文字滚动样式 */
+        .scrolling-text3 {
+            font-family: "Anton SC", sans-serif;
+            display: inline-block;
+            visibility: visible !important;
+            white-space: nowrap;
+            color: #ffffff67;
+            font-size: 12vh;
+            animation: scrollLeft 300s linear infinite; /* 滚动时间和线性动画 */
+        }
+
+        /* 滚动动画 */
+        @keyframes scrollLeft {
+            0% {
+                transform: translateX(0) translateY(0); /* 从左开始，垂直方向无偏移 */
+            }
+            100% {
+                transform: translateX(-100%) translateY(-10px); /* 水平移动到左边，垂直上移 10px */
+            }
+        }
+                        /* 主滚动字幕容器 */
+        .scrolling-text-container4 {
+            position: absolute;
+            top: 45vh;
+            left: 0;
+            width: 100%; /* 占满整个视口宽度 */
+            height: auto; /* 设置容器高度 */
+            z-index: -100;
+            display: flex;
+            align-items: center;
+            overflow: hidden; /* 隐藏超出部分 */
+            transform: rotate(-5deg); /* 将容器倾斜5度 */
+        }
+
+        /* 文字滚动样式 */
+        .scrolling-text4 {
+            font-family: "Anton SC", sans-serif;
+            display: inline-block;
+            visibility: visible !important;
+            white-space: nowrap;
+            color: #ffffff67;
+            font-size: 12vh;
+            animation: scrollRight 300s linear infinite; /* 滚动时间和线性动画 */
+        }
+
+        @keyframes scrollRight {
+            0% {
+                transform: translateX(-100%) /* 从视口右侧外开始 */
+            }
+            100% {
+                transform: translateX(0); /* 向左滚动到视口外 */
+            }
+        }
+
+        .scrolling-text-container5 {
+            position: absolute;
+            top: 60vh;
+            left: 0;
+            width: 100%; /* 占满整个视口宽度 */
+            height: auto; /* 设置容器高度 */
+            z-index: -100;
+            display: flex;
+            align-items: center;
+            overflow: hidden; /* 隐藏超出部分 */
+            transform: rotate(-5deg); /* 将容器倾斜5度 */
+        }
+
+        /* 文字滚动样式 */
+        .scrolling-text5 {
+            font-family: "Anton SC", sans-serif;
+            visibility: visible !important;
+            display: inline-block;
+            white-space: nowrap;
+            color: #ffffff67;
+            font-size: 12vh;
+            animation: scrollLeft 300s linear infinite; /* 滚动时间和线性动画 */
+        }
+
+        /* 滚动动画 */
+        @keyframes scrollLeft {
+            0% {
+                transform: translateX(0) translateY(0); /* 从左开始，垂直方向无偏移 */
+            }
+            100% {
+                transform: translateX(-100%) translateY(-10px); /* 水平移动到左边，垂直上移 10px */
+            }
+        }
+        .scrolling-text-container6 {
+            position: absolute;
+            top: 73vh;
+            left: 0;
+            width: 100%; /* 占满整个视口宽度 */
+            height: auto; /* 设置容器高度 */
+            z-index: -100;
+            display: flex;
+            align-items: center;
+            overflow: hidden; /* 隐藏超出部分 */
+            transform: rotate(-5deg); /* 将容器倾斜5度 */
+        }
+
+        /* 文字滚动样式 */
+        .scrolling-text6 {
+            font-family: "Anton SC", sans-serif;
+            visibility: visible !important;
+            display: inline-block;
+            white-space: nowrap;
+            color: #ffffff67;
+            font-size: 12vh;
+            animation: scrollRight 300s linear infinite; /* 滚动时间和线性动画 */
+        }
+
+        @keyframes scrollRight {
+            0% {
+                transform: translateX(-100%) /* 从视口右侧外开始 */
+            }
+            100% {
+                transform: translateX(0); /* 向左滚动到视口外 */
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <script src="script.js"></script>
+
+    <div class="scrolling-text-container">
+        <div class="scrolling-text1">
+            CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp;CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp;CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp;CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp;
+            CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp;CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp;CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp;CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp;
+        </div>
+    </div>
+    <div class="scrolling-text-container2">
+        <div class="scrolling-text2">
+            WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp;
+            WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; 
+        </div>
+    </div>
+    <div class="scrolling-text-container3">
+        <div class="scrolling-text3">
+            CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp;CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp;CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp;CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp;
+            CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp;CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp;CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp;CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp;
+        </div>
+    </div>
+    <div class="scrolling-text-container4">
+        <div class="scrolling-text4">
+            WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp;
+            WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; 
+        </div>
+    </div>
+    <div class="scrolling-text-container5">
+        <div class="scrolling-text5">
+            CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp;CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp;CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp;CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp;
+            CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp;CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp;CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp;CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp;
+        </div>
+    </div>
+    <div class="scrolling-text-container6">
+        <div class="scrolling-text6">
+            WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp;
+            WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; 
+        </div>
+    </div>
+    
+
+
+ 
+    
+    
+    <header>
+        
+        <div class="logo-container">
+            <img src="logo.png" alt="Clyde Logo" class="logo">
+        </div>
+        <div class="additional-shapes">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#" onclick="navigateTo('home')">Home</a></li>
+                <li><a href="#" onclick="navigateTo('about')">About</a></li>
+                <li><a href="#" onclick="navigateTo('projects')">Projects</a></li>
+                <li><a href="#" onclick="navigateTo('contact')">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="home" class="page active hero">
+        <div class="hero-text">
+            <h1>
+                <span data-en="Hi" data-cn="你好" data-jp="こんにちは">Hi</span><br>
+                <span data-en="This" data-cn="这是" data-jp="これは"></span>
+                <span class="highlight" data-en="CLYDE" data-cn="克莱德" data-jp="クライド">CLYDE</span><br>
+                <span data-en="Nice" data-cn="很高兴" data-jp="はじめまして"></span><br>
+                <span data-en="ToMeet" data-cn="认识" data-jp=""></span>
+                <span class="highlight" data-en="U" data-cn="你" data-jp="">U</span>
+            </h1>
+        </div>
+        
+        <a href="#" class="custom-play-button" onclick="navigateTo('contact')">
+            <span class="play-icon">Contact Me</span>
+        </a>      
+    </section>
+
+    <section id="about" class="page">
+        <h2 data-en="About Me" data-cn="关于我" data-jp="私について">About Me</h2>
+        <p data-en="Hello!" data-cn="你好！" data-jp="こんにちは！"></p>
+    </section>
+
+    <section id="projects" class="page">
+        <h2 data-en="My Projects" data-cn="我的项目" data-jp="私のプロジェクト">My Projects</h2>
+        <div class="project-list">
+            <div class="project-item">
+                <h3 data-en="Project One" data-cn="项目一" data-jp="プロジェクト1">Project One</h3>
+                <p data-en="A brief description of this amazing project." data-cn="这个惊人项目的简短描述。" data-jp="この素晴らしいプロジェクトの簡単な説明。">A brief description of this amazing project.</p>
+            </div>
+            <div class="project-item">
+                <h3 data-en="Project Two" data-cn="项目二" data-jp="プロジェクト2">Project Two</h3>
+                <p data-en="A brief description of another great project." data-cn="另一个出色项目的简短描述。" data-jp="もう一つの素晴らしいプロジェクトの簡単な説明。">A brief description of another great project.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="page contact">
+        <div class="contact-container">
+            <h2>Contact Me</h2>
+            <div class="contact-links">
+                <a href="https://qm.qq.com/q/ZHBaT2evE4" class="contact-link qq">
+                    <img src="icons8-qq-96.png" alt="QQ"> QQ
+                </a>
+                <a href="https://u.wechat.com/MAXrNMT-5SPpyxhYpzsjwU4" class="contact-link wechat">
+                    <img src="icons8-wechat-96.png" alt="WeChat"> WeChat
+                </a>
+                <a href="https://discord.gg/vsvakwngQQ" class="contact-link discord">
+                    <img src="icons8-discord-96.png" alt="Discord"> Discord
+                </a>
+                <a href="https://steamcommunity.com/profiles/76561198844814496/" class="contact-link steam">
+                    <img src="icons8-steam-96.png" alt="Steam"> Steam
+                </a>
+                <a href="https://space.bilibili.com/39256054" class="contact-link bilibili">
+                    <img src="icons8-bilibili-96.png" alt="Bilibili"> Bilibili
+                </a>
+                <a href="https://x.com/ForXxx_Ten" class="contact-link twitter">
+                    <img src="icons8-twitter-96.png" alt="Twitter"> Twitter
+                </a>
+            </div>
+    
+            <!-- 分割线 -->
+            <hr>
+    
+            <!-- 友情链接 -->
+            <div class="friend-links">
+                <h3>Friend Links</h3>
+                <ul>
+                    <li><a href="https://example1.com" target="_blank">Example Link 1</a></li>
+                    <li><a href="https://example2.com" target="_blank">Example Link 2</a></li>
+                    <li><a href="https://example3.com" target="_blank">Example Link 3</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    
+    
+    
+    
+
+    <footer>
+        <p data-en="&copy; 2024 Clyde. All rights reserved.v6" data-cn="&copy; 2024 克莱德。版权所有。" data-jp="&copy; 2024 クライド。全著作権所有。">&copy; 2024 Xiaotian Zhu. All rights reserved.</p>
+        <div class="language-selector">
+            <button onclick="changeLanguage('en')">English</button>
+            <button onclick="changeLanguage('cn')">中文</button>
+            <button onclick="changeLanguage('jp')">日本語</button>
+        </div>
+    </footer>
+
+    
+</body>
+</html>
