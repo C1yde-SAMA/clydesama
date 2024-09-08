@@ -2,7 +2,7 @@
 body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     color: #333;
-    background-image: url('backgroud.png');
+    background-image: url('images/background.png');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -17,24 +17,23 @@ body {
 }
 
 @media (max-width: 768px) {
-
     body {
         font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
         color: #333;
-        background-position: right center; /* 背景图片右对齐 */
+        background-image: url('images/background.png');
         background-size: cover;
-        background-position: center;
+        background-position: calc(100% + 40vw) center; /* 向左移动35vw */
         background-repeat: no-repeat;
-        background-color: rgba(255, 255, 255, 0.7); /* 使用略深的灰色作为背景色 */
+        background-color: rgba(255, 255, 255, 0.7);
         background-blend-mode: lighten;
         margin: 0;
         min-height: 100vh;
         width: 100%;
         display: flex;
         flex-direction: column;
-        overflow: auto; /* 允许页面内容滚动 */
+        overflow: auto;
     }
-
+    
 }
 
 header {
