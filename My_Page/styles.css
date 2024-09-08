@@ -4,7 +4,7 @@ body {
     color: #333;
     background-image: url('background.png');
     background-size: cover;
-    background-position: center;
+    background-position: right center;
     background-repeat: no-repeat;
     background-color: rgba(255, 255, 255, 0.7); /* 使用略深的灰色作为背景色 */
     background-blend-mode: lighten;
