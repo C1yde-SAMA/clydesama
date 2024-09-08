@@ -1,3 +1,4 @@
+/* 全局设置 */
 body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     color: #333;
@@ -8,10 +9,11 @@ body {
     background-color: rgba(255, 255, 255, 0.7); /* 使用略深的灰色作为背景色 */
     background-blend-mode: lighten;
     margin: 0;
-    min-height: 100%;
+    min-height: 100vh;
     width: 100%;
     display: flex;
     flex-direction: column;
+    overflow: auto; /* 允许页面内容滚动 */
 }
 
 header {
@@ -29,7 +31,7 @@ header {
     display: flex;
     align-items: center;
     padding: 0;
-    background-color: #cae4ff; /* 白色背景 */
+    background-color: #cae4ff77; /* 白色背景 */
     clip-path: polygon(0% 0%, 100% 0%, calc(100% - 50px) 100%, 0% 100%); /* 固定的斜率 */
     box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.1); /* 添加一个基本阴影 */
     height: 100%; /* 使高度与 header 一致 */
@@ -468,7 +470,7 @@ footer {
     padding: 5px 5px;
     font-size: 18px;
     font-weight: bold;
-    color: white;
+    color: rgba(255, 255, 255, 0.493);
     text-decoration: none;
     border-radius: 12px;
     transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
@@ -678,5 +680,6 @@ hr {
     .friend-links ul li a {
         font-size: 16px; /* 调整链接字体大小 */
     }
+
 }
 

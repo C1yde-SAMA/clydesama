@@ -16,11 +16,259 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Great+Vibes&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton+SC&display=swap" rel="stylesheet">
+    <style>
+        /* 主滚动字幕容器 */
+        .scrolling-text-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%; /* 占满整个视口宽度 */
+            height: auto; /* 设置容器高度 */
+            z-index: -100;
+            display: flex;
+            align-items: center;
+            overflow: hidden; /* 隐藏超出部分 */
+            transform: rotate(-5deg); /* 将容器倾斜5度 */
+        }
+
+        /* 文字滚动样式 */
+        .scrolling-text1 {
+            font-family: "Anton SC", sans-serif;
+            display: inline-block;
+            visibility: visible !important;
+            white-space: nowrap;
+            color: #ffffff67;
+            font-size: 12vh;
+            animation: scrollLeft 300s linear infinite; /* 滚动时间和线性动画 */
+        }
+
+        /* 滚动动画 */
+        @keyframes scrollLeft {
+            0% {
+                transform: translateX(0) translateY(0); /* 从左开始，垂直方向无偏移 */
+            }
+            100% {
+                transform: translateX(-100%) translateY(-10px); /* 水平移动到左边，垂直上移 10px */
+            }
+        }
+                /* 主滚动字幕容器 */
+        .scrolling-text-container2 {
+            position: absolute;
+            top: 15vh;
+            left: 0;
+            width: 100%; /* 占满整个视口宽度 */
+            height: auto; /* 设置容器高度 */
+            z-index: -100;
+            display: flex;
+            align-items: center;
+            overflow: hidden; /* 隐藏超出部分 */
+            transform: rotate(-5deg); /* 将容器倾斜5度 */
+        }
+
+        /* 文字滚动样式 */
+        .scrolling-text2 {
+            font-family: "Anton SC", sans-serif;
+            display: inline-block;
+            visibility: visible !important;
+            white-space: nowrap;
+            color: #ffffff67;
+            font-size: 12vh;
+            animation: scrollRight 300s linear infinite; /* 滚动时间和线性动画 */
+        }
+
+        @keyframes scrollRight {
+            0% {
+                transform: translateX(-100%) /* 从视口右侧外开始 */
+            }
+            100% {
+                transform: translateX(0); /* 向左滚动到视口外 */
+            }
+        }
+        /* 主滚动字幕容器 */
+        .scrolling-text-container3 {
+            position: absolute;
+            top: 30vh;
+            left: 0;
+            width: 100%; /* 占满整个视口宽度 */
+            height: auto; /* 设置容器高度 */
+            z-index: -100;
+            display: flex;
+            align-items: center;
+            overflow: hidden; /* 隐藏超出部分 */
+            transform: rotate(-5deg); /* 将容器倾斜5度 */
+        }
+
+        /* 文字滚动样式 */
+        .scrolling-text3 {
+            font-family: "Anton SC", sans-serif;
+            display: inline-block;
+            visibility: visible !important;
+            white-space: nowrap;
+            color: #ffffff67;
+            font-size: 12vh;
+            animation: scrollLeft 300s linear infinite; /* 滚动时间和线性动画 */
+        }
+
+        /* 滚动动画 */
+        @keyframes scrollLeft {
+            0% {
+                transform: translateX(0) translateY(0); /* 从左开始，垂直方向无偏移 */
+            }
+            100% {
+                transform: translateX(-100%) translateY(-10px); /* 水平移动到左边，垂直上移 10px */
+            }
+        }
+                        /* 主滚动字幕容器 */
+        .scrolling-text-container4 {
+            position: absolute;
+            top: 45vh;
+            left: 0;
+            width: 100%; /* 占满整个视口宽度 */
+            height: auto; /* 设置容器高度 */
+            z-index: -100;
+            display: flex;
+            align-items: center;
+            overflow: hidden; /* 隐藏超出部分 */
+            transform: rotate(-5deg); /* 将容器倾斜5度 */
+        }
+
+        /* 文字滚动样式 */
+        .scrolling-text4 {
+            font-family: "Anton SC", sans-serif;
+            display: inline-block;
+            visibility: visible !important;
+            white-space: nowrap;
+            color: #ffffff67;
+            font-size: 12vh;
+            animation: scrollRight 300s linear infinite; /* 滚动时间和线性动画 */
+        }
+
+        @keyframes scrollRight {
+            0% {
+                transform: translateX(-100%) /* 从视口右侧外开始 */
+            }
+            100% {
+                transform: translateX(0); /* 向左滚动到视口外 */
+            }
+        }
+
+        .scrolling-text-container5 {
+            position: absolute;
+            top: 60vh;
+            left: 0;
+            width: 100%; /* 占满整个视口宽度 */
+            height: auto; /* 设置容器高度 */
+            z-index: -100;
+            display: flex;
+            align-items: center;
+            overflow: hidden; /* 隐藏超出部分 */
+            transform: rotate(-5deg); /* 将容器倾斜5度 */
+        }
+
+        /* 文字滚动样式 */
+        .scrolling-text5 {
+            font-family: "Anton SC", sans-serif;
+            visibility: visible !important;
+            display: inline-block;
+            white-space: nowrap;
+            color: #ffffff67;
+            font-size: 12vh;
+            animation: scrollLeft 300s linear infinite; /* 滚动时间和线性动画 */
+        }
+
+        /* 滚动动画 */
+        @keyframes scrollLeft {
+            0% {
+                transform: translateX(0) translateY(0); /* 从左开始，垂直方向无偏移 */
+            }
+            100% {
+                transform: translateX(-100%) translateY(-10px); /* 水平移动到左边，垂直上移 10px */
+            }
+        }
+        .scrolling-text-container6 {
+            position: absolute;
+            top: 73vh;
+            left: 0;
+            width: 100%; /* 占满整个视口宽度 */
+            height: auto; /* 设置容器高度 */
+            z-index: -100;
+            display: flex;
+            align-items: center;
+            overflow: hidden; /* 隐藏超出部分 */
+            transform: rotate(-5deg); /* 将容器倾斜5度 */
+        }
+
+        /* 文字滚动样式 */
+        .scrolling-text6 {
+            font-family: "Anton SC", sans-serif;
+            visibility: visible !important;
+            display: inline-block;
+            white-space: nowrap;
+            color: #ffffff67;
+            font-size: 12vh;
+            animation: scrollRight 300s linear infinite; /* 滚动时间和线性动画 */
+        }
+
+        @keyframes scrollRight {
+            0% {
+                transform: translateX(-100%) /* 从视口右侧外开始 */
+            }
+            100% {
+                transform: translateX(0); /* 向左滚动到视口外 */
+            }
+        }
+
+    </style>
 </head>
 <body>
-    <div id="loading-screen" class="loading-screen">
+    <!-- <div id="loading-screen" class="loading-screen">
         <h1 class="handwritten-text">Hello</h1>
+    </div> -->
+
+    <div class="scrolling-text-container">
+        <div class="scrolling-text1">
+            CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp;CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp;CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp;CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp;
+            CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp;CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp;CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp;CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp;
+        </div>
     </div>
+    <div class="scrolling-text-container2">
+        <div class="scrolling-text2">
+            WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp;
+            WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; 
+        </div>
+    </div>
+    <div class="scrolling-text-container3">
+        <div class="scrolling-text3">
+            CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp;CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp;CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp;CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp;
+            CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp;CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp;CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp;CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp;
+        </div>
+    </div>
+    <div class="scrolling-text-container4">
+        <div class="scrolling-text4">
+            WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp;
+            WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; 
+        </div>
+    </div>
+    <div class="scrolling-text-container5">
+        <div class="scrolling-text5">
+            CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp;CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp;CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp;CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp;
+            CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp;CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp;CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp;CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp; CLYDESAMA &nbsp;
+        </div>
+    </div>
+    <div class="scrolling-text-container6">
+        <div class="scrolling-text6">
+            WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp;
+            WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; WELCOME &nbsp; 
+        </div>
+    </div>
+    
+
+
+ 
+    
     
     <header>
         
@@ -28,9 +276,6 @@
             <img src="logo.png" alt="Clyde Logo" class="logo">
         </div>
         <div class="additional-shapes">
-            <div class="shape"></div>
-            <div class="shape"></div>
-            <div class="shape"></div>
         </div>
         <nav>
             <ul>
@@ -41,7 +286,6 @@
             </ul>
         </nav>
     </header>
-
     <section id="home" class="page active hero">
         <div class="hero-text">
             <h1>

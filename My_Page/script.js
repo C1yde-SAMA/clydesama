@@ -1,19 +1,28 @@
 document.addEventListener("DOMContentLoaded", function() {
     changeLanguage('en'); // 默认设置为英语
+
     const loadingScreen = document.getElementById('loading-screen');
     const mainContent = document.getElementById('main-content');
 
-    // 手写动画结束后，隐藏 loading-screen，显示主页内容
-    loadingScreen.addEventListener('animationend', () => {
-        loadingScreen.style.transition = 'opacity 0.5s ease-in-out';
-        loadingScreen.style.opacity = '0';  // 淡出加载屏幕
+    // 检查元素是否存在
+    if (loadingScreen && mainContent) {
 
-        // 等待加载屏幕淡出后再显示主页内容
-        setTimeout(() => {
-            loadingScreen.classList.add('hidden');
-            mainContent.style.opacity = '1'; // 淡入主页面
-        }, 0);  // 0.5s 的过渡时间
-    });
+        // 监听动画结束事件
+        loadingScreen.addEventListener('animationend', () => {
+            // 将 loading-screen 的透明度逐渐变为 0，实现淡出效果
+            loadingScreen.style.transition = 'opacity 0.5s ease-in-out';
+            loadingScreen.style.opacity = '0';  // 淡出加载屏幕
+
+            // 在淡出动画结束后，隐藏加载屏幕并显示主内容
+            setTimeout(() => {
+                loadingScreen.classList.add('hidden');  // 隐藏加载屏幕
+                mainContent.style.opacity = '1'; // 显示主页面内容
+            }, 500);  // 使用与过渡时间相同的 0.5s
+        });
+
+    } else {
+        console.error('Loading screen or main content element not found.');
+    }
 });
 
 function changeLanguage(language) {
